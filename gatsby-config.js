@@ -14,6 +14,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    '@chakra-ui/gatsby-plugin',
     "gatsby-plugin-mdx",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
@@ -34,5 +35,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    
   ],
 };
