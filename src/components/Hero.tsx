@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <Stack minH={'40vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'space-between'}>
-        <Stack spacing={6} w={'full'} maxW={'lg'}>
+        <Stack spacing={6} w={'full'} maxW={'xl'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
             <Text
               as={'span'}
@@ -28,11 +28,11 @@ export default function Hero() {
                 bg: 'blue.400',
                 zIndex: -1,
               }}>
-              Freelance
+              B-Pay
             </Text>
             <br />{' '}
             <Text color={'blue.400'} as={'span'}>
-              Design Projects
+              Bill pay & Management System
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
@@ -47,7 +47,7 @@ export default function Hero() {
               _hover={{
                 bg: 'blue.500',
               }}>
-              Create Project
+              Get Started
             </Button>
             <Button rounded={'full'}>How It Works</Button>
           </Stack>
@@ -58,7 +58,7 @@ export default function Hero() {
           alt={'Login Image'}
           objectFit={'scale-down'}
           src={
-            'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+            'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/6617.jpg?alt=media&token=28beddc3-3a1b-47e7-bcf8-2ee9208fd494'
           }
         />
       </Flex>
