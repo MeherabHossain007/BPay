@@ -74,7 +74,7 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href= {"/Login"}>
+              href= {"/login"}>
               Login
             </Button>
             <Button
@@ -253,10 +253,10 @@ import {
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'Home',
-      href: '#',
+      href: '/',
     },
     {
       label: 'About',
-      href: '#',
+      href: '/about',
     },
   ];
