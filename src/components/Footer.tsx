@@ -20,7 +20,7 @@ import {
       objectFit={'none'}
       height={32}
       className="img-responsive"
-      src={'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/Asset%203.png?alt=media&token=ccbd9be0-a06c-4166-b8d3-95af5854c94e'}
+      src={'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/logo.png?alt=media&token=9b826346-add6-41f8-9d81-dcb3d64cf71f'}
       />
     );
   };
