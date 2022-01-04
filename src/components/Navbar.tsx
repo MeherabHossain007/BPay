@@ -57,7 +57,7 @@ import {
               alt={'Logo'}
               objectFit={'none'}
               className="img-responsive"
-              src={'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/Asset%203.png?alt=media&token=ccbd9be0-a06c-4166-b8d3-95af5854c94e'}
+              src={'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/logo.png?alt=media&token=9b826346-add6-41f8-9d81-dcb3d64cf71f'}
               />
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -74,24 +74,24 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href= {"/Login"}>
+              href= {"/login"}>
               Login
             </Button>
             <Button
-              display={{ base: 'none', md: 'inline-flex' }}
+              as={'a'}
               fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
+              fontWeight={400}
+              color= 'white'
+              variant={'solid'}
+              bg = 'blue.400'
               _hover={{
-                bg: 'pink.300',
-              }}>
+                bg: 'blue.400',
+              }}
+              href= {"/signUp"}>
               Sign Up
             </Button>
           </Stack>
         </Flex>
-  
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
@@ -253,10 +253,10 @@ import {
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'Home',
-      href: '#',
+      href: '/',
     },
     {
       label: 'About',
-      href: '#',
+      href: '/about',
     },
   ];
