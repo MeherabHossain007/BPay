@@ -56,7 +56,7 @@ function billBoard() {
           <Tab maxWidth={"250px"}>Gas Bill</Tab>
           <Tab maxWidth={"250px"}>Internet Bill</Tab>
         </TabList>
-        <TabPanels>
+        <TabPanels bg={'white'} >
           <TabPanel><Form/></TabPanel>
           <TabPanel><Form/></TabPanel>
           <TabPanel><Form/></TabPanel>

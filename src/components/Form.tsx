@@ -4,12 +4,8 @@ import {
     Container,
     Flex,
     Box,
-    Heading,
-    Text,
-    IconButton,
     Button,
     VStack,
-    HStack,
     Wrap,
     WrapItem,
     FormControl,
@@ -20,17 +16,13 @@ import {
     Textarea,
   } from '@chakra-ui/react';
   import {
-    MdPhone,
-    MdEmail,
-    MdLocationOn,
-    MdFacebook,
     MdOutlineEmail,
   } from 'react-icons/md';
-  import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+  import { BsPerson } from 'react-icons/bs';
   
   function Form() {
     return (
-      <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
+      <Container bg="gray.200" maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <Box
             color="white"
