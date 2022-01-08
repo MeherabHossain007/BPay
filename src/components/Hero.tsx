@@ -39,8 +39,10 @@ export default function Hero() {
             The project board is an exclusive resource for contract work. It's
             perfect for freelancers, agencies, and moonlighters.
           </Text>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+          <Stack direction={'row'} spacing={4}>
             <Button
+              as = {'a'}
+              href= {"/signUp"}
               rounded={'full'}
               bg={'blue.400'}
               color={'white'}

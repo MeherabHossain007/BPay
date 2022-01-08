@@ -48,17 +48,10 @@ import {
         <Box
           borderTopWidth={1}
           borderStyle={'solid'}
+          py={4}
           borderColor={useColorModeValue('gray.200', 'gray.700')}>
-          <Container
-            as={Stack}
-            maxW={'6xl'}
-            py={4}
-            direction={{ base: 'column', md: 'row' }}
-            spacing={4}
-            justify={{ base: 'center', md: 'space-between' }}
-            align={{ base: 'center', md: 'center' }}>
-            <Text align={'center'}>© 2021 BPay Limited. All rights reserved</Text>
-          </Container>
+          <Text textAlign={'center'}>© 2021 BPay Limited. All rights reserved</Text>
+          
         </Box>
       </Box>
     );

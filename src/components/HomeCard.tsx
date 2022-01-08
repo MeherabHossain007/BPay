@@ -8,6 +8,7 @@ import {
     Text,
     Stack,
     Image,
+    Button
   } from '@chakra-ui/react';
   
   export default function HomeCard({IMAGE,Title}) {
@@ -37,9 +38,24 @@ import {
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+            <Heading color={'gray.500'} fontSize={'medium'} textTransform={'uppercase'}>
               {Title}
-            </Text>
+            </Heading>
+          </Stack>
+          <Stack spacing={4} m={6} align={'center'}>
+            <Button
+              as = {'a'}
+              href= {'/billBoard'}
+              rounded={'full'}
+              size={'md'}
+              width={'150px'}
+              bg={'gray.300'}
+              color={'white'}
+              _hover={{
+                bg: 'gray.400',
+              }}>
+              Pay Now
+            </Button>
           </Stack>
         </Box>
       </Center>
