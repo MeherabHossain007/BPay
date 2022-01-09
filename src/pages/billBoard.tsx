@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Title from "../components/Title";
 import Form from "../components/Form";
+import EbillData from "../components/EbillData";
 
 function billBoard() {
   return (
@@ -57,7 +58,7 @@ function billBoard() {
           <Tab maxWidth={"250px"}>Internet Bill</Tab>
         </TabList>
         <TabPanels bg={'white'} >
-          <TabPanel><Form/></TabPanel>
+          <TabPanel><EbillData/></TabPanel>
           <TabPanel><Form/></TabPanel>
           <TabPanel><Form/></TabPanel>
           <TabPanel><Form/></TabPanel>

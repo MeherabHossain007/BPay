@@ -19,7 +19,7 @@ import {
             fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
             lineHeight={'110%'}>
             Bill Payment & Management System{' '}
-            <Text as={'span'} color={'orange.400'}>
+            <Text as={'span'} color={'blue.400'}>
               Dashboard
             </Text>
           </Heading>
