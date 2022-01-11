@@ -8,7 +8,9 @@ import {
   Th,
   Td,
   TableCaption,
+  Button,
 } from "@chakra-ui/react";
+import PaymentForm from "./paymentForm";
 const EbillData = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
@@ -27,21 +29,27 @@ const EbillData = () => {
           <Th>Bill No.</Th>
           <Th>Meter No.</Th>
           <Th>Consume Unit</Th>
-          <Th>Payment</Th> 
+          <Th>Payment</Th>
+          <Th> </Th>
         </Tr>
       </Thead>
       <Tbody>
-        {
-            item.map((item) =>(
-                <Tr>
-                    <Td>{item.e_id}</Td>
-                    <Td>{item.Bill_NO}</Td>
-                    <Td>{item.Meter_NO}</Td>
-                    <Td>{item.con_unit}</Td>
-                    <Td>{item.pay_info}</Td>
-                </Tr>
-            ))
-        }
+        {item.map((item) => (
+          <Tr>
+            <Td>{item.e_id}</Td>
+            <Td>{item.Bill_NO}</Td>
+            <Td>{item.Meter_NO}</Td>
+            <Td>{item.con_unit}</Td>
+            <Td>{item.pay_info}</Td>
+            <Td>
+              <PaymentForm>
+              <Button colorScheme='blue' mr={3}>
+                Pay
+              </Button>
+              </PaymentForm>
+            </Td>
+          </Tr>
+        ))}
       </Tbody>
     </Table>
   );

@@ -45,8 +45,6 @@ class Login extends Component {
               align={"start"}
               justify={"space-between"}
             >
-              <Checkbox>Remember me</Checkbox>
-              <Link color={"blue.400"}>Forgot password?</Link>
             </Stack>
           </Stack>
         </Stack>

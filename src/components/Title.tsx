@@ -15,7 +15,8 @@ import {
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}>
           <Heading
-            fontWeight={600}
+            fontFamily={'Raleway'}
+            fontWeight={900}
             fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
             lineHeight={'110%'}>
             Bill Payment & Management System{' '}

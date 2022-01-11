@@ -4,6 +4,7 @@ import HomeCard from "../components/HomeCard";
 import Layout from "../components/Layout";
 import { Container, HStack } from "@chakra-ui/layout";
 import FeatureText from "../components/FeatureText";
+import ReviewBoard from "../components/Review";
 
 const IndexPage = () => {
   return (
@@ -29,6 +30,7 @@ const IndexPage = () => {
             Title={"Electricity Bill"}
             />
           </HStack>
+          <ReviewBoard/>
         </>
       </Layout>
     </main>

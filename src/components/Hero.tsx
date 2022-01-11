@@ -55,12 +55,13 @@ export default function Hero() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex h={'40vh'}>
+      <Flex h={'50vh'}>
         <Image
           alt={'Login Image'}
-          objectFit={'scale-down'}
+          boxSize={'600px'}
+          objectFit={'contain'}
           src={
-            'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/6617.jpg?alt=media&token=28beddc3-3a1b-47e7-bcf8-2ee9208fd494'
+            'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/997%20%5BConverted%5D.png?alt=media&token=d3fd3677-4b69-4d00-a508-f95fd935239c'
           }
         />
       </Flex>
