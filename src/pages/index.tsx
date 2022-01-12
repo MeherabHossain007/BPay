@@ -34,10 +34,7 @@ const IndexPage = () => {
             Title={"Internet Bill"}
             />
           </HStack>
-          <Container maxW='full' centerContent p={6}>
             <FeaturePage/>
-          </Container>
-          
           <ReviewBoard/>
         </>
       </Layout>

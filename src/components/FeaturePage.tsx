@@ -50,7 +50,6 @@ const features = [
         giving user friendly services to everyone.
         </Text>
       </Stack>
-
       <Container maxW={'6xl'} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {features.map((feature) => (

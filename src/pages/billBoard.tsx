@@ -14,12 +14,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Title from "../components/Title";
-import Form from "../components/FeaturePage";
 import EbillData from "../components/EbillData";
+import {AiOutlineUser} from 'react-icons/ai'
 
 function billBoard() {
   return (
-    <Box>
+    <Box p={3}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -45,8 +45,8 @@ function billBoard() {
           spacing={6}
           align={"center"}
         >
-          <Text>meherab788</Text>
-          <Avatar size={"md"} />
+          <Text fontFamily={'Raleway'} fontWeight={700}>{window.name}</Text>
+          <Avatar size={"md"} bg='gray.300' icon={<AiOutlineUser fontSize='1.5rem' />} />
         </Stack>
       </Flex>
       <Title />
@@ -56,11 +56,10 @@ function billBoard() {
         align={"center"}
         colorScheme={"none"}
       >
-        <TabList>
+        <TabList className="no-outline">
           <Tab maxWidth={"250px"}>
             {" "}
             <Image
-              rounded={"lg"}
               boxSize="50px"
               objectFit="contain"
               src={
@@ -71,7 +70,6 @@ function billBoard() {
           <Tab maxWidth={"250px"}>
             {" "}
             <Image
-              rounded={"lg"}
               boxSize="50px"
               objectFit="contain"
               src={
@@ -82,7 +80,6 @@ function billBoard() {
           <Tab maxWidth={"250px"}>
             {" "}
             <Image
-              rounded={"lg"}
               boxSize="50px"
               objectFit="contain"
               src={
@@ -93,7 +90,6 @@ function billBoard() {
           <Tab maxWidth={"250px"}>
             {" "}
             <Image
-              rounded={"lg"}
               boxSize="50px"
               objectFit="contain"
               src={
