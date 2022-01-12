@@ -10,7 +10,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 
-const LogData = ({ username, password, children }) => {
+const LogData = ({ user, password, children }) => {
   const [verify, setVerify] = useState([]);
   useEffect(() => {
     fetch("http://localhost:80/api/")
@@ -21,10 +21,10 @@ const LogData = ({ username, password, children }) => {
   }, []);
   var isLogin: string;
   verify.map((verify) => {
-    if (username == verify.u_id && password == verify.password) {
+    if (user == verify.u_id && password == verify.password) {
       isLogin = "/billBoard";
       return isLogin;
-    } 
+    }
   });
   const toast = useToast();
   return (
@@ -51,7 +51,8 @@ const LogData = ({ username, password, children }) => {
             {children}
             <Stack spacing={8} my={8} maxW={"lg"}>
               <Button
-                onClick={() =>
+                onClick={() => {
+                  window.name = user;
                   isLogin == undefined
                     ? toast({
                         title: "password or username is invalid",
@@ -59,8 +60,8 @@ const LogData = ({ username, password, children }) => {
                         duration: 900,
                         isClosable: true,
                       })
-                    : ""
-                }
+                    : "";
+                }}
                 as={"a"}
                 bg={"blue.400"}
                 color={"white"}

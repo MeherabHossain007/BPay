@@ -14,7 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Title from "../components/Title";
-import Form from "../components/Form";
+import Form from "../components/FeaturePage";
 import EbillData from "../components/EbillData";
 
 function billBoard() {
@@ -90,7 +90,17 @@ function billBoard() {
               }
             />
           </Tab>
-          <Tab maxWidth={"250px"}>Internet Bill</Tab>
+          <Tab maxWidth={"250px"}>
+            {" "}
+            <Image
+              rounded={"lg"}
+              boxSize="50px"
+              objectFit="contain"
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/wifi.png?alt=media&token=1253c45a-4031-467b-b472-a0668313bf48"
+              }
+            />
+          </Tab>
         </TabList>
         <TabPanels bg={"white"}>
           <TabPanel>
@@ -105,15 +115,9 @@ function billBoard() {
             </Text>
             <EbillData />
           </TabPanel>
-          <TabPanel>
-            <Form />
-          </TabPanel>
-          <TabPanel>
-            <Form />
-          </TabPanel>
-          <TabPanel>
-            <Form />
-          </TabPanel>
+          <TabPanel></TabPanel>
+          <TabPanel></TabPanel>
+          <TabPanel></TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { Container, HStack } from "@chakra-ui/layout";
 import FeatureText from "../components/FeatureText";
 import ReviewBoard from "../components/Review";
+import FeaturePage from "../components/FeaturePage";
 
 const IndexPage = () => {
   return (
@@ -29,7 +30,14 @@ const IndexPage = () => {
             <HomeCard IMAGE={"https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/Asset%203.png?alt=media&token=6aa9f6cc-b6dd-45ce-a6af-338b878b013b"}
             Title={"Electricity Bill"}
             />
+            <HomeCard IMAGE={"https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/wifi.png?alt=media&token=1253c45a-4031-467b-b472-a0668313bf48"}
+            Title={"Internet Bill"}
+            />
           </HStack>
+          <Container maxW='full' centerContent p={6}>
+            <FeaturePage/>
+          </Container>
+          
           <ReviewBoard/>
         </>
       </Layout>

@@ -25,7 +25,7 @@ class Login extends Component {
 
   render() {
     return (
-      <LogData username={this.state.username} password={this.state.password}>
+      <LogData user={this.state.username} password={this.state.password}>
         <Stack spacing={4}>
           <FormControl id="Username">
             <FormLabel>Username</FormLabel>
