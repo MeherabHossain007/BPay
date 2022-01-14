@@ -6,6 +6,7 @@ import { Container, HStack } from "@chakra-ui/layout";
 import FeatureText from "../components/FeatureText";
 import ReviewBoard from "../components/Review";
 import FeaturePage from "../components/FeaturePage";
+import ReviewSubmit from "../components/ReviewSubmit";
 
 const IndexPage = () => {
   return (
@@ -36,6 +37,7 @@ const IndexPage = () => {
           </HStack>
             <FeaturePage/>
           <ReviewBoard/>
+          <ReviewSubmit/>
         </>
       </Layout>
     </main>

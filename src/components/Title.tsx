@@ -8,7 +8,10 @@ import {
   import * as React from 'react';
   export default function Title() {
     return (
-      <Container maxW={'-webkit-fit-content'}>
+      <Container
+      bgImage="url('https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/5632952.png?alt=media&token=66015bf2-5d95-466b-86a0-b7b9242befa0')"
+      bgSize={'760px'}
+       maxW={'full'}>
         <Stack
           textAlign={'center'}
           align={'center'}

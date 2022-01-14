@@ -55,7 +55,7 @@ const features = [
           {features.map((feature) => (
             <HStack align={'top'}>
               <VStack align={'start'}>
-                <Text fontWeight={600} bgGradient={feature.color} bgClip='text' fontSize={'xl'}>{feature.title}</Text>
+                <Text fontWeight={600} bgGradient={feature.color} bgClip='text' fontSize={'2xl'}>{feature.title}</Text>
                 <Text color={'gray.600'}>{feature.text}</Text>
               </VStack>
             </HStack>

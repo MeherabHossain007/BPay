@@ -105,9 +105,10 @@ function billBoard() {
               fontWeight={"extrabold"}
               textAlign={"start"}
               fontSize={"80px"}
-              color={"gray.500"}
+              bgGradient={'linear-gradient(90deg, rgba(243,144,63,1) 19%, rgba(237,103,60,1) 26%, rgba(233,63,57,1) 30%, rgba(253,200,18,1) 57%, rgba(252,239,68,1) 100%)'}
+              bgClip='text'
             >
-              Electricity Bill .
+              Electricity Bill
             </Text>
             <EbillData />
           </TabPanel>
