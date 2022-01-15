@@ -16,7 +16,7 @@ import PrintFrom from "./PrintFrom";
 const WbillData = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:80/ebill/")
+    fetch("http://localhost:80/wbill/")
       .then((res) => res.json())
       .then((result) => {
         setItem(result);
@@ -42,16 +42,16 @@ const WbillData = () => {
         {item.map((item) =>
           item.u_id == window.name ? (
             <Tr>
-              <Td>{item.e_id}</Td>
-              <Td>{item.Bill_No}</Td>
-              <Td>{item.Meter_NO}</Td>
-              <Td>{item.con_unit}</Td>
+              <Td>{item.w_id}</Td>
+              <Td>{item.bill_no}</Td>
+              <Td>{item.cp_no}</Td>
+              <Td>{item.house_type}</Td>
               <Td>{item.amount}</Td>
-              <Td>{item.date}</Td>
+              <Td>{item.bill_date}</Td>
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'ELECTRICITY'}>
+                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'WATER'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -59,7 +59,7 @@ const WbillData = () => {
                         let formData = new FormData();
                         formData.append("userName", window.name);
                         formData.append("paid", paid);
-                        const url = "http://localhost:80/ebillUpdate/";
+                        const url = "http://localhost:80/wbillUpdate/";
                         axios
                           .post(url, formData)
                           .then((res) => console.log(res.data))

@@ -16,7 +16,7 @@ import PrintFrom from "./PrintFrom";
 const TbillData = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:80/ebill/")
+    fetch("http://localhost:80/tbill/")
       .then((res) => res.json())
       .then((result) => {
         setItem(result);
@@ -41,16 +41,16 @@ const TbillData = () => {
         {item.map((item) =>
           item.u_id == window.name ? (
             <Tr>
-              <Td>{item.e_id}</Td>
-              <Td>{item.Bill_No}</Td>
-              <Td>{item.Meter_NO}</Td>
-              <Td>{item.con_unit}</Td>
+              <Td>{item.i_id}</Td>
+              <Td>{item.bill_no}</Td>
+              <Td>{item.connection_type}</Td>
               <Td>{item.amount}</Td>
-              <Td>{item.date}</Td>
+              <Td>{item.amount}</Td>
+              <Td>{item.bill_date}</Td>
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'ELECTRICITY'}>
+                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'INTERNET'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -58,7 +58,7 @@ const TbillData = () => {
                         let formData = new FormData();
                         formData.append("userName", window.name);
                         formData.append("paid", paid);
-                        const url = "http://localhost:80/ebillUpdate/";
+                        const url = "http://localhost:80/tbillUpdate/";
                         axios
                           .post(url, formData)
                           .then((res) => console.log(res.data))

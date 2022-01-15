@@ -16,7 +16,7 @@ import PrintFrom from "./PrintFrom";
 const GbillData = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:80/ebill/")
+    fetch("http://localhost:80/gbill/")
       .then((res) => res.json())
       .then((result) => {
         setItem(result);
@@ -32,7 +32,7 @@ const GbillData = () => {
           <Th>Gas Bill Id</Th>
           <Th>Bill No.</Th>
           <Th>Zone</Th>
-          <Th>Appliance_Type</Th>
+          <Th>Appliance Type</Th>
           <Th>Amount</Th>
           <Th>Date</Th>
           <Th>Payment</Th>
@@ -42,16 +42,16 @@ const GbillData = () => {
         {item.map((item) =>
           item.u_id == window.name ? (
             <Tr>
-              <Td>{item.e_id}</Td>
+              <Td>{item.g_id}</Td>
               <Td>{item.Bill_No}</Td>
-              <Td>{item.Meter_NO}</Td>
-              <Td>{item.con_unit}</Td>
-              <Td>{item.amount}</Td>
-              <Td>{item.date}</Td>
+              <Td>{item.Zone}</Td>
+              <Td>{item.Appliance_Type}</Td>
+              <Td>{item.Amount}</Td>
+              <Td>{item.Date}</Td>
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'ELECTRICITY'}>
+                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'GAS'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -59,7 +59,7 @@ const GbillData = () => {
                         let formData = new FormData();
                         formData.append("userName", window.name);
                         formData.append("paid", paid);
-                        const url = "http://localhost:80/ebillUpdate/";
+                        const url = "http://localhost:80/gbillUpdate/";
                         axios
                           .post(url, formData)
                           .then((res) => console.log(res.data))
