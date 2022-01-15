@@ -1,8 +1,6 @@
-import React from "react";
-
+import React, { Component, useEffect, useState } from "react";
+import LogData from "../components/LogData";
 import {
-  Flex,
-  Box,
   FormControl,
   FormLabel,
   Input,
@@ -10,63 +8,49 @@ import {
   Stack,
   Link,
   Button,
-  Heading,
-  Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
-export default function Login() {
-  return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack align={"center"}>
-          <Heading fontSize={"4xl"}>Sign in to your account</Heading>
-          <Text fontSize={"lg"} color={"gray.600"}>
-            to enjoy all of our cool <Link color={"blue.400"}>features</Link> ✌️
-          </Text>
-        </Stack>
-        <Box
-          rounded={"lg"}
-          bg={useColorModeValue("white", "gray.700")}
-          boxShadow={"lg"}
-          p={8}
-        >
-          <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input type="password" />
-            </FormControl>
-            <Stack spacing={10}>
-              <Stack
-                direction={{ base: "column", sm: "row" }}
-                align={"start"}
-                justify={"space-between"}
-              >
-                <Checkbox>Remember me</Checkbox>
-                <Link color={"blue.400"}>Forgot password?</Link>
-              </Stack>
-              <Button
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-              >
-                Sign in
-              </Button>
+class Login extends Component {
+  state = {
+    username: "",
+    password: "",
+  };
+
+  handleAdd = async (e) => {
+    await this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  render() {
+    return (
+      <LogData user={this.state.username} password={this.state.password}>
+        <Stack spacing={4}>
+          <FormControl id="Username">
+            <FormLabel>Username</FormLabel>
+            <Input name={'username'}
+                  onChange={this.handleAdd}
+                   type="text"/>
+          </FormControl>
+          <FormControl id="password">
+            <FormLabel>Password</FormLabel>
+            <Input onChange={this.handleAdd}
+                    name={'password'}
+                    type="password"/>
+          </FormControl>
+          <Stack spacing={10}>
+            <Stack
+              direction={{ base: "column", sm: "row" }}
+              align={"start"}
+              justify={"space-between"}
+            >
             </Stack>
           </Stack>
-        </Box>
-      </Stack>
-    </Flex>
-  );
+        </Stack>
+      </LogData>
+    );
+  }
 }
+
+export default Login;

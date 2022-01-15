@@ -49,3 +49,18 @@ nav a:hover {
   max-height: 72px;
   max-width: 100px;
 }
+button:focus {
+  outline: 0 !important;
+}
+
+.no-outline {
+  outline: none;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  outline-style: none;
+}

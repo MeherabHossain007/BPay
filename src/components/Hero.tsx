@@ -39,8 +39,10 @@ export default function Hero() {
             The project board is an exclusive resource for contract work. It's
             perfect for freelancers, agencies, and moonlighters.
           </Text>
-          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+          <Stack direction={'row'} spacing={4}>
             <Button
+              as = {'a'}
+              href= {"/signUp"}
               rounded={'full'}
               bg={'blue.400'}
               color={'white'}
@@ -53,12 +55,13 @@ export default function Hero() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex h={'40vh'}>
+      <Flex h={'50vh'}>
         <Image
           alt={'Login Image'}
-          objectFit={'scale-down'}
+          boxSize={'600px'}
+          objectFit={'contain'}
           src={
-            'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/6617.jpg?alt=media&token=28beddc3-3a1b-47e7-bcf8-2ee9208fd494'
+            'https://firebasestorage.googleapis.com/v0/b/bpay-b1197.appspot.com/o/997%20%5BConverted%5D.png?alt=media&token=d3fd3677-4b69-4d00-a508-f95fd935239c'
           }
         />
       </Flex>

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'gatsby'
 import {
     Box,
     Center,
@@ -8,14 +8,18 @@ import {
     Text,
     Stack,
     Image,
+    Button,
   } from '@chakra-ui/react';
   
   export default function HomeCard({IMAGE,Title}) {
     return (
-      <Center py={12}>
+      <Link to={'/login'}>
+        <Center py={12}>
         <Box
+          as={'a'}
           role={'group'}
           p={6}
+          height={'400px'}
           maxW={'330px'}
           w={'full'}
           bg={useColorModeValue('white', 'gray.800')}
@@ -37,11 +41,14 @@ import {
             />
           </Box>
           <Stack pt={10} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+            <Heading color={'gray.500'} fontSize={'medium'} textTransform={'uppercase'}>
+              
               {Title}
-            </Text>
+            </Heading>
           </Stack>
         </Box>
       </Center>
+      </Link>
+      
     );
   }
