@@ -16,6 +16,10 @@ import {
 import Title from "../components/Title";
 import EbillData from "../components/EbillData";
 import {AiOutlineUser} from 'react-icons/ai'
+import Logout from "../components/Logout";
+import WbillData from "../components/WbillData";
+import GbillData from "../components/GbillData";
+import TbillData from "../components/TbillData";
 
 function billBoard() {
   return (
@@ -46,7 +50,7 @@ function billBoard() {
           align={"center"}
         >
           <Text fontFamily={'Raleway'} fontWeight={700}>{window.name}</Text>
-          <Avatar size={"md"} bg='gray.300' icon={<AiOutlineUser fontSize='1.5rem' />} />
+          <Logout children={<Avatar size={"md"} bg='gray.300' icon={<AiOutlineUser fontSize='1.5rem' />} />}/>
         </Stack>
       </Flex>
       <Title />
@@ -112,9 +116,45 @@ function billBoard() {
             </Text>
             <EbillData />
           </TabPanel>
-          <TabPanel></TabPanel>
-          <TabPanel></TabPanel>
-          <TabPanel></TabPanel>
+          <TabPanel>
+          <Text
+              fontFamily={"Raleway"}
+              fontWeight={"extrabold"}
+              textAlign={"start"}
+              fontSize={"80px"}
+              bgGradient={'linear-gradient(90deg, rgba(87,98,172,1) 7%, rgba(107,157,211,1) 21%)'}
+              bgClip='text'
+            >
+              Water Bill
+            </Text>
+            <WbillData/>
+          </TabPanel>
+          <TabPanel>
+          <Text
+              fontFamily={"Raleway"}
+              fontWeight={"extrabold"}
+              textAlign={"start"}
+              fontSize={"80px"}
+              bgGradient={'linear-gradient(90deg, rgba(233,63,57,1) 7%, rgba(250,159,84,1) 19%)'}
+              bgClip='text'
+            >
+              Gas Bill
+            </Text>
+            <GbillData/>
+          </TabPanel>
+          <TabPanel>
+          <Text
+              fontFamily={"Raleway"}
+              fontWeight={"extrabold"}
+              textAlign={"start"}
+              fontSize={"80px"}
+              bgGradient={'linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 44%)'}
+              bgClip='text'
+            >
+              Internet Bill
+            </Text>
+            <TbillData/>
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

@@ -21,6 +21,7 @@
     "@mdx-js/react": "^1.6.22",
     "@react-navigation/native": "^6.0.6",
     "axios": "^0.24.0",
+    "formik": "^2.2.9",
     "gatsby": "^4.4.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
@@ -40,7 +41,11 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
+    "react-slick": "^0.28.1",
     "react-to-print": "^2.14.3",
     "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.8"
   }
 }

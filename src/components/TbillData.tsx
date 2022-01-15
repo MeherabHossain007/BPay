@@ -13,7 +13,7 @@ import PaymentForm from "./paymentForm";
 import axios from "axios";
 import PrintFrom from "./PrintFrom";
 
-const EbillData = () => {
+const TbillData = () => {
   const [item, setItem] = useState([]);
   useEffect(() => {
     fetch("http://localhost:80/ebill/")
@@ -29,14 +29,12 @@ const EbillData = () => {
       <TableCaption></TableCaption>
       <Thead>
         <Tr>
-          <Th>Electricity Bill Id</Th>
+          <Th>Internet Bill Id</Th>
           <Th>Bill No.</Th>
-          <Th>Meter No.</Th>
-          <Th>Consume Unit</Th>
+          <Th>Connection Type</Th>
           <Th>Amount</Th>
           <Th>Date</Th>
           <Th>Payment</Th>
-          <Th> </Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -88,4 +86,4 @@ const EbillData = () => {
   );
 };
 
-export default EbillData;
+export default TbillData;

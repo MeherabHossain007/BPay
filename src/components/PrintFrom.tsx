@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 import { useReactToPrint } from "react-to-print";
 
-function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO }) {
+function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO,billName }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const componentRef = useRef();
@@ -63,7 +63,7 @@ function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO }) {
                   fontSize={"40px"}
                   color={"gray.500"}
                 >
-                  Electricity Bill
+                  {billName}
                 </Text>
                 <Text
                   fontWeight={"extrabold"}

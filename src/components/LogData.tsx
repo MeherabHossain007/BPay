@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, } from "react";
 import {
   Flex,
   Box,
@@ -60,7 +60,10 @@ const LogData = ({ user, password, children }) => {
                         duration: 900,
                         isClosable: true,
                       })
-                    : "";
+                    : window.history.pushState(null, null, window.location.href);
+                    window.onpopstate = function (event) {
+                        history.go(1);
+                    };
                 }}
                 as={"a"}
                 bg={"blue.400"}

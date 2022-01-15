@@ -28,15 +28,16 @@ function Card(props): JSX.Element {
       as="label"
       {...checkbox}
       cursor="pointer"
+      borderWidth='1px'
       borderRadius="md"
-      boxShadow="md"
+      boxShadow="xl"
       w="100%"
       _checked={{
-        bg: "blue.400",
-        color: "white",
+        bg: 'whiteAlpha.500',
+        color: "black",
       }}
       _focus={{
-        boxShadow: "outline",
+        boxShadow: 'inner',
       }}
       px={5}
       py={3}
