@@ -79,7 +79,7 @@ const WbillData = () => {
               </Td>
             </Tr>
           ) : (
-            ""
+            " "
           )
         )}
       </Tbody>
