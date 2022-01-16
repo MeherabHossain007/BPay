@@ -30,7 +30,6 @@ const GbillData = () => {
       <Thead>
         <Tr>
           <Th>Gas Bill Id</Th>
-          <Th>Bill No.</Th>
           <Th>Zone</Th>
           <Th>Appliance Type</Th>
           <Th>Amount</Th>
@@ -43,7 +42,6 @@ const GbillData = () => {
           item.u_id == window.name ? (
             <Tr>
               <Td>{item.g_id}</Td>
-              <Td>{item.Bill_No}</Td>
               <Td>{item.Zone}</Td>
               <Td>{item.Appliance_Type}</Td>
               <Td>{item.Amount}</Td>
@@ -51,7 +49,7 @@ const GbillData = () => {
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'GAS'}>
+                  <PaymentForm bId={item.g_id} bNo={item.Date} amount={item.Amount} billName={'GAS'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -74,7 +72,7 @@ const GbillData = () => {
                     </Button>
                   </PaymentForm>
                 ) : (
-                  <PrintFrom name={window.name} e_id={item.e_id} billNo={item.Bill_No} Meter_NO={item.Meter_NO} Con_NO={item.con_unit} billName= 'Electricity Bill'/>
+                  <PrintFrom name={window.name} e_id={item.g_id} billNo={item.Bill_No} date_NO={item.Date} amount_NO={item.Amount} billName= 'Gas Bill'/>
                 )}
               </Td>
             </Tr>

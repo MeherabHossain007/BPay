@@ -51,7 +51,7 @@ const WbillData = () => {
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'WATER'}>
+                  <PaymentForm bId={item.e_id} bNo={item.bill_date} amount={item.amount} billName={'WATER'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -74,7 +74,7 @@ const WbillData = () => {
                     </Button>
                   </PaymentForm>
                 ) : (
-                  <PrintFrom name={window.name} e_id={item.e_id} billNo={item.Bill_No} Meter_NO={item.Meter_NO} Con_NO={item.con_unit} billName= 'Electricity Bill'/>
+                  <PrintFrom name={window.name} e_id={item.w_id} billNo={item.bill_No} date_NO={item.bill_date} amount_NO={item.amount} billName= 'Water Bill'/>
                 )}
               </Td>
             </Tr>

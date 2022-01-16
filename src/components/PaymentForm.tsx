@@ -41,7 +41,7 @@ function PaymentForm({ children, bId, bNo, amount, billName }) {
           <ModalCloseButton />
           <ModalBody pb={6}>
             <Card label={name} text={bId} />
-            <Card label={"BILL NO"} text={bNo} />
+            <Card label={"DATE"} text={bNo} />
             <Card label={'AMOUNT'} text={amount} />
             <Stack marginTop={5}>
               <RadioCard />

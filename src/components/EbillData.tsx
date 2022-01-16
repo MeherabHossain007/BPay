@@ -52,7 +52,7 @@ const EbillData = () => {
               <Td>{item.pay_info}</Td>
               <Td>
                 {item.pay_info === "Not Paid" ? (
-                  <PaymentForm bId={item.e_id} bNo={item.Bill_No} amount={item.amount} billName={'ELECTRICITY'}>
+                  <PaymentForm bId={item.e_id} bNo={item.date} amount={item.amount} billName={'ELECTRICITY'}>
                     <Button
                       onClick={() => {
                         const paid = "Paid";
@@ -75,7 +75,7 @@ const EbillData = () => {
                     </Button>
                   </PaymentForm>
                 ) : (
-                  <PrintFrom name={window.name} e_id={item.e_id} billNo={item.Bill_No} Meter_NO={item.Meter_NO} Con_NO={item.con_unit} billName= 'Electricity Bill'/>
+                  <PrintFrom name={window.name} e_id={item.e_id} billNo={item.Bill_No} date_NO={item.date} amount_NO={item.amount} billName= 'Electricity Bill'/>
                 )}
               </Td>
             </Tr>

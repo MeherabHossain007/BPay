@@ -19,10 +19,11 @@ import {
   Tr,
   Th,
   Td,
+  HStack,
 } from "@chakra-ui/react";
 import { useReactToPrint } from "react-to-print";
 
-function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO,billName }) {
+function PrintFrom({ name, e_id, billNo, date_NO, amount_NO,billName }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const componentRef = useRef();
@@ -75,18 +76,18 @@ function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO,billName }) {
                 <Table size="sm">
                   <Thead>
                     <Tr>
-                      <Th>Electricity Bill Id</Th>
+                      <Th>{billName} Id</Th>
                       <Th>Bill No.</Th>
-                      <Th>Meter No.</Th>
-                      <Th>Consume Unit</Th>
+                      <Th>Date</Th>
+                      <Th>Amount</Th>
                     </Tr>
                   </Thead>
                   <Tbody>
                     <Tr>
                       <Td>{e_id}</Td>
                       <Td>{billNo}</Td>
-                      <Td>{Meter_NO}</Td>
-                      <Td>{Con_NO}</Td>
+                      <Td>{date_NO}</Td>
+                      <Td>{amount_NO}</Td>
                     </Tr>
                   </Tbody>
                 </Table>
@@ -101,10 +102,12 @@ function PrintFrom({ name, e_id, billNo, Meter_NO, Con_NO,billName }) {
               </Flex>
             </Box>
             </div>
-            <Button onClick={handlePrint}>Print</Button>
           </ModalBody>
           <ModalFooter>
+            <HStack spacing={3}>
+            <Button onClick={handlePrint}>Print</Button>
             <Button onClick={onClose}>Close</Button>
+            </HStack>
           </ModalFooter>
         </ModalContent>
       </Modal>
