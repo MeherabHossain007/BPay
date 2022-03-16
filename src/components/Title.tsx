@@ -22,7 +22,7 @@ import {
             fontWeight={900}
             fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
             lineHeight={'110%'}>
-            Bill Payment & Management System{' '}
+            Bill Payment & Management Systems{' '}
             <Text as={'span'} color={'blue.400'}>
               Dashboard
             </Text>
